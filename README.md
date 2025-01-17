@@ -1,5 +1,8 @@
 # NLP Theresa Course Syllabus
 
+## Master Program
+THERESA - digiTal tecHnologiEs foR thE Security of criticAl infrastructures
+
 ## Course Description
 
 This course provides a comprehensive introduction to Natural Language Processing (NLP), starting with the fundamentals and progressing to cutting-edge techniques like Large Language Models (LLMs). Students will learn about text preprocessing, vectorization, and traditional NLP tasks such as text classification and named entity recognition. The course then delves into deep learning methods, including RNNs, LSTMs, and the Transformer architecture, and how they're applied in NLP. The curriculum emphasizes hands-on experience with building and fine-tuning NLP models, as well as responsible AI practices. By the end of the course, students will have a solid understanding of both classical and modern NLP techniques and be able to apply them to real-world problems.
