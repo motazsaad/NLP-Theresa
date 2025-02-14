@@ -64,3 +64,12 @@ Speech and Language Processing (3rd ed. draft) by Dan Jurafsky and James H. Mart
 ## Assessment Criteria
 
 *   Final Pass/Fail Exam 
+
+
+# Copyright Notics 
+These slides are distributed for educational purpose under the Creative Commons License. https://creativecommons.org/licenses/by-sa/2.0/legalcode
+
+Source of Slides: 
+* DeepLearning.AI as the source of the slides.
+* Generative AI
+* Harvard Teaching and Learning Consortium
