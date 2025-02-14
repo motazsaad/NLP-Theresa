@@ -18,3 +18,7 @@ https://arxiv.org/abs/2307.03109
 ## Free LLM API providers 
 * https://github.com/cheahjs/free-llm-api-resources
 * https://developer.nvidia.com/nim
+
+
+## Evaluating RAG 
+* https://weaviate.io/blog/retrieval-evaluation-metrics
