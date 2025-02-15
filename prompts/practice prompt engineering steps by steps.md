@@ -47,8 +47,9 @@ Better prompt:
 
 ```prompt
 Give me a lighthearted weather update for Paris, France, with a humorous twist.
-Use your own prompt now and experiment with varying the tone you request.
 ```
+
+Use your own prompt now and experiment with varying the tone you request.
 
 ---
 
@@ -61,8 +62,9 @@ Explain cyclones.
 Better: 
 ```prompt
 Explain how cyclones form, using the example of Cyclone Nisarga. Please provide sources.
-Use your own prompt now and experiment with requesting the GenAI use an example or analogy.
 ```
+Use your own prompt now and experiment with requesting the GenAI use an example or analogy.
+
 
 ---
 
@@ -76,8 +78,10 @@ Tell me everything about weather.
 Better: 
 ```prompt
 Provide an overview of the factors that influence the formation of thunderstorms.
-Use your own prompt now and experiment with limiting the scope of your request.
 ```
+
+Use your own prompt now and experiment with limiting the scope of your request.
+
 
 --- 
 
@@ -148,8 +152,9 @@ Successful prompt:
 
 ```prompt
 Create an image of a grade 2 student learning about the weather.
-Use your own prompt now and experiment with creating your own images.
 ```
+
+Use your own prompt now and experiment with creating your own images.
 
 --- 
 
