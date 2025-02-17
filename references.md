@@ -15,6 +15,10 @@ https://arxiv.org/abs/2307.03109
 * https://github.com/huggingface/evaluation-guidebook/
 * https://github.com/microsoft/generative-ai-for-beginners
 
+# Building AI Gents 
+* https://github.com/microsoft/ai-agents-for-beginners
+* https://github.com/ashishpatel26/500-AI-Agents-Projects
+
 ## Free LLM API providers 
 * https://github.com/cheahjs/free-llm-api-resources
 * https://developer.nvidia.com/nim
