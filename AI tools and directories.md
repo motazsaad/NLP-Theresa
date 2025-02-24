@@ -82,6 +82,34 @@
 
 ---
 
+## Open-Source RAG (Retrieval-Augmented Generation) Tools  
+
+* [LangChain](https://github.com/hwchase17/langchain) - A popular framework for building RAG applications, integrating LLMs with various retrieval and memory components.  
+* [Haystack](https://github.com/deepset-ai/haystack) - An open-source NLP framework for building RAG pipelines, supporting document retrieval, question answering, and summarization.  
+* [LlamaIndex (formerly GPT Index)](https://github.com/jerryjliu/llama_index) - A flexible library for indexing and querying unstructured data using LLMs.  
+* [Autogen](https://github.com/microsoft/autogen) - A Microsoft-developed framework for building multi-agent AI systems, including RAG-based retrieval workflows.  
+* [FastRAG](https://github.com/qdrant/fastrag) - A lightweight RAG framework optimized for performance, developed by the Qdrant team.  
+* [Vespa](https://github.com/vespa-engine/vespa) - An open-source search engine and vector database designed for RAG and AI-powered search applications.  
+* [Jina AI](https://github.com/jina-ai/jina) - A neural search framework that supports multimodal retrieval and RAG applications.
+* [Unstructured.io](https://github.com/Unstructured-IO/unstructured) - A library for preprocessing and chunking documents for use in RAG pipelines.  
+* [Qdrant](https://github.com/qdrant/qdrant) - A vector search engine optimized for semantic search and retrieval in RAG-based AI systems.  
+* [Marqo](https://github.com/marqo-ai/marqo) - An open-source vector search library designed for scalable RAG and document retrieval use cases.  
+* [RediSearch](https://github.com/redis/redisearch) - A high-performance search and retrieval module for Redis that can be used in RAG workflows.  
+* [Txtai](https://github.com/neuml/txtai) - A lightweight embedding-based search engine for implementing RAG pipelines with local models.  
+* [RAGFlow](https://github.com/infiniflow/ragflow) - A production-ready open-source RAG framework designed for enterprise applications.  
+* [FlashRAG](https://github.com/RUC-NLPIR/FlashRAG) - An efficient and fast RAG framework optimized for real-time document retrieval.  
+* [Paperless-AI](https://github.com/clusterzx/paperless-ai) - A document-based RAG system that enables LLMs to interact with PDFs and other files for knowledge retrieval.  
+
+---
+
+## Open-Source vector Databases 
+
+* [ChromaDB](https://github.com/chroma-core/chroma) - An open-source vector database optimized for embedding storage and retrieval in RAG applications.  
+* [Weaviate](https://github.com/weaviate/weaviate) - A scalable open-source vector search engine that integrates with RAG pipelines.  
+* [Milvus](https://github.com/milvus-io/milvus) - A high-performance open-source vector database used for similarity search and RAG applications.  
+
+---
+
 
 ## AI-Powered Image Generation Tools  
 
