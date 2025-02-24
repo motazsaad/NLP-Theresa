@@ -39,7 +39,7 @@ By systematically evaluating different embedding models, you can determine the b
 
 ### All in a single prompt 
 
-prompt```
+```prompt
 Generate [number] search queries in the [Lang] language related to the [domain] domain. Each query should belong to one of the following categories:
 
 For each generated query, create three documents in [Lang] language, categorized as follows:
