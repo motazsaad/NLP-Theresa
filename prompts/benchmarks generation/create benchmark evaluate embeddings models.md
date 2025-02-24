@@ -35,9 +35,12 @@ By systematically evaluating different embedding models, you can determine the b
 
 ## Use LLMs to create a benchmark dataset for search relevance in the domain of interest
 
+## Generation Prompts 
+
+### All in a single prompt 
 
 prompt```
-Generate [X] search queries in the [Lang] language related to the [domain] domain. Each query should belong to one of the following categories:
+Generate [number] search queries in the [Lang] language related to the [domain] domain. Each query should belong to one of the following categories:
 
 For each generated query, create three documents in [Lang] language, categorized as follows:
 - Relevant document (label: "relevant") – A document that directly and comprehensively addresses the query.
@@ -97,6 +100,82 @@ Expected JSON Output:
   ]
 }
 ```
+
+### Two prompts 
+
+You can split the task into two sub tasks 
+
+#### Task1: Generate Queries 
+
+```prompt 
+Generate [number] search queries in the [Lang] language related to the [domain] domain
+```
+
+#### Task2: documents for earch query 
+
+Loop over queries and submit the following prompt: 
+
+```prompt 
+For the query "[query]", create three documents in [Lang] language, categorized as follows:
+- Relevant document (label: "relevant") – A document that directly and comprehensively addresses the query.
+- Somewhat relevant document (label: "somewhat relevant") – A document that touches on related concepts but lacks full relevance.
+- Irrelevant document (label: "irrelevant") – A document that is unrelated to the query.
+
+Ensure the output is formatted in valid JSON with the following structure, including the domain information
+```
+
+Expected JSON Output:
+```JSON
+{
+  "benchmark": [
+    {
+      "index": 1,
+      "query": "Query text.",
+      "documents": [
+        {
+          "text": "Highly relevant document text.", 
+          "relevance": 3, 
+          "label": "relevant"
+        },
+        {
+          "text": "somewhat relevant text.", 
+          "relevance": 2, 
+          "label": "somewhat relevant"
+        },
+        {
+          "text": "irrelevant text.", 
+          "relevance": 0, 
+          "label": "irrelevant"
+        }
+      ]
+    },
+    {
+        
+      "index": 2,
+      "query": "Query text.",
+      "documents": [
+        {
+          "text": "Highly relevant document text.", 
+          "relevance": 3, 
+          "label": "relevant"
+        },
+        {
+          "text": "somewhat relevant text.", 
+          "relevance": 2, 
+          "label": "somewhat relevant"
+        },
+        {
+          "text": "irrelevant text.", 
+          "relevance": 0, 
+          "label": "irrelevant"
+        }
+      ]
+    }
+  ]
+}
+```
+
+
 
 
 ---
