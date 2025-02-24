@@ -1,5 +1,24 @@
 # AI tools and directories 
 
+## Table of Contents ToC
+
+- [AI tools and directories](#ai-tools-and-directories)
+  - [Table of Contents ToC](#table-of-contents-toc)
+  - [AI Tools Directories](#ai-tools-directories)
+  - [Web-Based Large Language Models (LLMs)](#web-based-large-language-models-llms)
+  - [Tools to Run LLMs Locally](#tools-to-run-llms-locally)
+  - [AI-Powered Data Analysis \& Visualization Tools](#ai-powered-data-analysis--visualization-tools)
+  - [AI-Powered Research \& Knowledge Management Tools](#ai-powered-research--knowledge-management-tools)
+  - [Open-Source RAG (Retrieval-Augmented Generation) Tools](#open-source-rag-retrieval-augmented-generation-tools)
+  - [Open-Source vector Databases](#open-source-vector-databases)
+  - [AI-Powered Image Generation Tools](#ai-powered-image-generation-tools)
+  - [AI-Powered Video Generation Tools (With Free Credits)](#ai-powered-video-generation-tools-with-free-credits)
+  - [AI-Powered Academic Databases](#ai-powered-academic-databases)
+  - [AI-Powered Concept Mapping and Mind Mapping Tools](#ai-powered-concept-mapping-and-mind-mapping-tools)
+  - [AI-Powered Text Review \& Writing Assistance Tools](#ai-powered-text-review--writing-assistance-tools)
+  - [AI Agent Frameworks \& Libraries](#ai-agent-frameworks--libraries)
+
+
 ## AI Tools Directories  
 
 * [Stork AI](https://www.stork.ai/) - A collaboration platform that integrates AI-powered voice and video messaging, transcription, and knowledge management.  
@@ -195,6 +214,24 @@
 * [Rytr](https://rytr.me/) - An AI-powered content generator for blogs, marketing copy, and creative writing.  
 * [Notion AI](https://www.notion.so/product/ai) - An AI-powered writing assistant integrated into Notion for note-taking, summarization, and content generation.  
 * [Sudowrite](https://www.sudowrite.com/) - An AI tool designed for creative writing, helping authors brainstorm, rephrase, and enhance their storytelling.  
+
+## AI Agent Frameworks & Libraries  
+
+* [CrewAI](https://github.com/joaomdmoura/crewai) - A framework for building multi-agent AI workflows, enabling task delegation and collaboration between AI agents.  
+* [AutoGen](https://github.com/microsoft/autogen) - A Microsoft-developed library for building multi-agent systems that automate complex AI workflows.  
+* [LangGraph](https://github.com/hwchase17/langgraph) - A graph-based agent orchestration framework for building AI workflows with LangChain.  
+* [GPT Researcher](https://github.com/assafelovic/gpt-researcher) - An autonomous AI agent that performs research tasks by gathering and summarizing relevant information.  
+* [Camel-AI](https://github.com/camel-ai/camel) - A framework for role-playing AI agents that communicate and collaborate to solve tasks.  
+* [SuperAGI](https://github.com/TransformerOptimus/SuperAGI) - An open-source framework for creating autonomous AI agents capable of planning and executing tasks.  
+* [MetaGPT](https://github.com/geekan/MetaGPT) - A multi-agent system designed for collaborative problem-solving and software development.  
+* [AutoGPT](https://github.com/Torantulino/Auto-GPT) - One of the first autonomous AI agents designed to generate and execute tasks independently.  
+* [BabyAGI](https://github.com/yoheinakajima/babyagi) - A lightweight AI agent that automates task execution using LLMs and memory.  
+* [Voyager](https://github.com/MineDojo/Voyager) - An AI-powered agent designed for continuous learning and self-improvement.  
+* [OpenDevin](https://github.com/OpenDevin/OpenDevin) - An AI agent for software development that can debug, refactor, and generate code autonomously.  
+* [AI Engineer](https://github.com/big-agi/ai-engineer) - A multi-agent AI system for automating coding and software engineering workflows.  
+* [AutoGPTQ](https://github.com/PanQiWei/AutoGPTQ) - A quantized version of AutoGPT optimized for efficiency and deployment.  
+* [ChatDev](https://github.com/OpenBMB/ChatDev) - A framework that simulates AI-powered software development teams.  
+* [Voyager](https://github.com/MineDojo/Voyager) - A reinforcement learning-based AI agent that continuously improves its capabilities.  
 
 
 
