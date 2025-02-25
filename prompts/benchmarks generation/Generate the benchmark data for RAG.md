@@ -38,6 +38,42 @@ Year: 2023
 - Data Privacy Incidents: 2 reported breaches  
 ```
 
+#### improved prompt 
+
+```Prompt
+Generate a corporate ESG report for a company in the {SECTOR} sector for the year {YEAR}. The report should be approximately {WORD_COUNT} words and follow a structured format.
+
+**Company Overview**  
+Provide a brief introduction to the company, including its name, headquarters location, size, and key business operations. Mention the company’s ESG mission, sustainability goals, and any major achievements related to environmental, social, or governance initiatives.
+
+**Report Date**  
+The report should be dated in December {YEAR}. Choose a specific date within December to reflect the annual summary.
+
+**ESG Performance Summary (Narrative + Table Format)**  
+For each of the **Environmental, Social, and Governance (ESG)** categories, include a written summary followed by a structured table presenting key performance indicators (KPIs).
+
+**Environmental Performance**  
+Describe the company's efforts in sustainability, emissions reduction, energy efficiency, and resource management. Discuss major initiatives and challenges.  
+Present at least **five** key environmental KPIs in a table with:  
+- KPI name  
+- Value  
+- Unit of measurement  
+- Brief explanation  
+
+**Social Performance**  
+Summarize the company’s impact on employees, communities, and stakeholders. Highlight diversity, equity, inclusion (DEI) efforts, employee well-being, and social responsibility programs.  
+Include at least **five** social KPIs in a table.  
+
+**Governance Performance**  
+Outline the company’s governance structure, ethical practices, transparency policies, and compliance measures. Discuss board diversity, executive compensation, and regulatory adherence.  
+Provide at least **five** governance KPIs in a table.  
+
+**Future Outlook**  
+Discuss the company’s ESG roadmap for the coming years. Highlight future goals, strategies for improvement, and commitments to sustainability. Mention planned initiatives, technology investments, or policy changes that will drive ESG performance forward.  
+
+Ensure the report aligns with recognized **ESG frameworks** such as **GRI, SASB, and ESRS**. The writing should be **clear, concise, and professional**, formatted for business executives and investors.
+```
+
 B. ESG-Specific KPI Templates
 
 * Create predefined templates for each industry (tech, finance, manufacturing).
@@ -225,3 +261,6 @@ print("✅ Synthetic ESG KPI dataset generated: synthetic_esg_kpi_dataset.json")
     ]
 }
 ```
+
+
+
