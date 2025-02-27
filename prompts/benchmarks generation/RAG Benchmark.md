@@ -151,8 +151,8 @@ For comparing extracted vs. ground truth values.
 
 | Model Output                         | Ground Truth                       | Match?        |
 |--------------------------------------|------------------------------------|---------------|
-| 2.3 metric tons per employee         | 2.3 metric tons per employee       | ![Green Check](https://via.placeholder.com/10/00ff00?text=+) Exact Match |
-| Tesla's emissions are 2.3 tons       | 2.3 metric tons per employee       | ![Red Cross](https://via.placeholder.com/10/ff0000?text=+) Partial Match |
+| 2.3 metric tons per employee         | 2.3 metric tons per employee       | ✔️ Exact Match |
+| Tesla's emissions are 2.3 tons       | 2.3 metric tons per employee       | ❌ Partial Match |
 
 ---
 
