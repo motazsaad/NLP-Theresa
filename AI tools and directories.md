@@ -117,7 +117,10 @@
 * [Txtai](https://github.com/neuml/txtai) - A lightweight embedding-based search engine for implementing RAG pipelines with local models.  
 * [RAGFlow](https://github.com/infiniflow/ragflow) - A production-ready open-source RAG framework designed for enterprise applications.  
 * [FlashRAG](https://github.com/RUC-NLPIR/FlashRAG) - An efficient and fast RAG framework optimized for real-time document retrieval.  
-* [Paperless-AI](https://github.com/clusterzx/paperless-ai) - A document-based RAG system that enables LLMs to interact with PDFs and other files for knowledge retrieval.  
+* [Paperless-AI](https://github.com/clusterzx/paperless-ai) - A document-based RAG system that enables LLMs to interact with PDFs and other files for knowledge retrieval.
+* [olmOCR](https://github.com/allenai/olmocr) - A toolkit for training language models to work with PDF documents in the wild.
+
+
 
 ---
 
