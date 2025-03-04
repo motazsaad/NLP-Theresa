@@ -2,7 +2,9 @@
 
 ## Papers 
 ### A Survey on Evaluation of Large Language Models
-https://arxiv.org/abs/2307.03109
+* https://arxiv.org/abs/2307.03109
+* https://arxiv.org/abs/2406.00515
+
 
 ## Prompt Engineering 
 * https://aistudio.google.com/app/gallery
