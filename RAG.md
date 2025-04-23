@@ -17,6 +17,9 @@ Note: LlamaParse is free up to a certain limit. You can integrate it later with 
 
 https://docs.llamaindex.ai/en/stable/llama_cloud/llama_parse/
 
+https://youtube.com/playlist?list=PL4HikwTaYE0H7wBxhvQqxYcKOkZ4O3zXh&si=zxsZs8oFEdp42oHk
+
+
 --- 
 
 ## Flowise AI
