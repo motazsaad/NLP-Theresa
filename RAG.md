@@ -42,4 +42,68 @@ Fair-code workflow automation platform with native AI capabilities. Combine visu
 https://github.com/n8n-io/n8n
 
 
+---
+
+
+# Vector databases that offer free tiers
+
+## 🟢 Qdrant
+
+- **Free Tier**: 1GB free cluster, no credit card required.
+- **Features**:
+  - Fully managed cloud service
+  - Supports horizontal and vertical scaling
+  - High availability with auto-healing
+  - Backup and disaster recovery
+- **Use Cases**: Semantic search, recommendation systems, AI-driven search functionalities
+- **Reference**: [qdrant.tech](https://qdrant.tech/pricing/)
+
+---
+
+## 🟡 Weaviate
+
+- **Free Tier**: 14-day sandbox access for learning and prototyping.
+- **Features**:
+  - Serverless SaaS deployment
+  - Hybrid search (vector + keyword)
+  - Schema-less data ingestion
+  - Built-in machine learning modules
+- **Use Cases**: Semantic search engines, contextual understanding applications
+- **Reference**: [weaviate.io](https://weaviate.io/deployment/serverless)
+
+---
+
+## 🔵 Pinecone
+
+- **Free Tier**: Includes community support and documentation access.
+- **Features**:
+  - Fully managed with automatic scaling
+  - Low-latency vector search
+  - Up to 2M write units and 1M read units/month
+- **Use Cases**: Managed vector similarity search without infrastructure overhead
+- **Reference**: [pinecone.io](https://www.pinecone.io/pricing/)
+
+---
+
+## 🟣 Chroma
+
+- **Free Tier**: Open-source under Apache 2.0 License. Chroma Cloud provides $5 free credits.
+- **Features**:
+  - Optimized for LLM-based applications
+  - Supports embedding storage and RAG
+- **Use Cases**: Embedding storage and retrieval for LLM-based apps
+- **Reference**: [trychroma.com](https://www.trychroma.com/)
+
+---
+
+## 🔴 Milvus
+
+- **Free Tier**: Open-source and free to use.
+- **Features**:
+  - Handles billion-scale vector data
+  - GPU acceleration
+  - Multiple indexing options
+- **Use Cases**: High-performance similarity search at large scale
+- **Reference**: [milvus.io](https://milvus.io/)
+
 
