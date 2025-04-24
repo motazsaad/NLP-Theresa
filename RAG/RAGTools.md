@@ -17,7 +17,6 @@ Note: LlamaParse is free up to a certain limit. You can integrate it later with 
 
 https://docs.llamaindex.ai/en/stable/llama_cloud/llama_parse/
 
-https://youtube.com/playlist?list=PL4HikwTaYE0H7wBxhvQqxYcKOkZ4O3zXh&si=zxsZs8oFEdp42oHk
 
 
 --- 
@@ -32,6 +31,9 @@ Good for: Build customized RAG workflows visually (like building a flowchart).
 2. Connect document loaders, embeddings, LLMs, all visually.
 
 https://github.com/FlowiseAI/Flowise 
+
+https://youtube.com/playlist?list=PL4HikwTaYE0H7wBxhvQqxYcKOkZ4O3zXh&si=zxsZs8oFEdp42oHk
+
 
 --- 
 
