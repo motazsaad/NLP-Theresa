@@ -17,6 +17,7 @@ Note: LlamaParse is free up to a certain limit. You can integrate it later with 
 
 https://docs.llamaindex.ai/en/stable/llama_cloud/llama_parse/
 
+https://docs.cloud.llamaindex.ai/llamacloud/getting_started/quick_start
 
 
 --- 
