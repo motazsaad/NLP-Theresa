@@ -33,8 +33,11 @@ Good for: Build customized RAG workflows visually (like building a flowchart).
 
 https://github.com/FlowiseAI/Flowise 
 
+### 2024 YT flowise AI playlist 
 https://youtube.com/playlist?list=PL4HikwTaYE0H7wBxhvQqxYcKOkZ4O3zXh&si=zxsZs8oFEdp42oHk
 
+### 2025 YT flowise AI playlist 
+https://www.youtube.com/playlist?list=PL4HikwTaYE0Gi60Xkc1VAZV6u1vrJiZLr
 
 --- 
 
