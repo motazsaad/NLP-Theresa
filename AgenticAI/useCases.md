@@ -597,4 +597,10 @@ Here are **multi-agent system examples (via FlowiseAI)** tailored to **curriculu
 
 ---
 
-Would you like a **Flowise workflow (JSON)**, **UI wireframe**, or **sample prompts** for any of the above curriculum development agents?
+
+
+# References 
+
+
+* https://github.com/microsoft/ai-agents-for-beginners
+* https://github.com/ashishpatel26/500-AI-Agents-Projects
