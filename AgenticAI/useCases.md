@@ -1,9 +1,93 @@
-# Agentic AI use cases
+# Agentic AI 
+
+
+
+The difference between **LLMs (Large Language Models)** and **Agentic AI** lies in **capability, behavior, and autonomy**. Here's a concise comparison:
+
+---
+
+### 🔹 1. **Definition**
+
+**LLM (Large Language Model)**:
+A foundational AI model trained on vast amounts of text to predict and generate human-like language. It responds to prompts but **does not have goals or plans** on its own.
+**Example**: GPT-4, Claude, LLaMA.
+
+**Agentic AI**:
+An AI system that **exhibits agent-like behavior**, including the ability to plan, make decisions, take actions, and use tools to accomplish goals **autonomously or semi-autonomously**.
+**Example**: Auto-GPT, OpenAI's GPTs with tool use and memory, or LangChain-based agents.
+
+---
+
+### 🔹 2. **Autonomy and Goal Orientation**
+
+| Aspect       | LLM                                            | Agentic AI                                                       |
+| ------------ | ---------------------------------------------- | ---------------------------------------------------------------- |
+| **Autonomy** | Stateless, reactive                            | Goal-driven, can act autonomously                                |
+| **Memory**   | No persistent memory (unless added externally) | Maintains memory and state across tasks                          |
+| **Planning** | No inherent planning                           | Uses planning and decision-making loops                          |
+| **Tool Use** | Only if explicitly integrated                  | Can autonomously select and use tools (e.g., search, code, APIs) |
+
+---
+
+### 🔹 3. **Architecture**
+
+* **LLM**: A passive component — receives input and returns output.
+* **Agentic AI**: Combines an LLM with other components like:
+
+  * A **planner** (to break down goals into tasks)
+  * A **memory module**
+  * **Tool interfaces**
+  * **Feedback loops**
+
+---
+
+### 🔹 4. **Examples**
+
+* **LLM**: You ask, “Translate this text,” and it gives a translation.
+* **Agentic AI**: You ask, “Research this topic and summarize five recent papers,” and it:
+
+  1. Plans a search strategy
+  2. Uses tools to search the web or databases
+  3. Reads and summarizes papers
+  4. Returns a consolidated report
+
+---
+
+### 🔹 5. **Analogy**
+
+* **LLM** = Brain without a body or goals.
+* **Agentic AI** = An AI assistant with a brain (LLM), memory, tools (hands), and goals — capable of independent action.
+
+---
+
+### 🔹 References
+
+1. OpenAI (2023). *Introducing GPTs.* [https://openai.com/blog/introducing-gpts](https://openai.com/blog/introducing-gpts)
+2. Auto-GPT project. [https://github.com/Torantulino/Auto-GPT](https://github.com/Torantulino/Auto-GPT)
+3. LangChain documentation. [https://docs.langchain.com](https://docs.langchain.com)
+4. Park et al., 2023. *Generative Agents: Interactive Simulacra of Human Behavior*. [https://arxiv.org/abs/2304.03442](https://arxiv.org/abs/2304.03442)
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+# Tools
 
 
 **FlowiseAI** is a low-code/no-code tool for building LLM (Large Language Model) applications using visual node-based workflows. It's often used to create **multi-agent systems** where several LLM-powered agents interact to solve complex tasks. Below are **practical use cases and examples** of **multi-agent AI systems using FlowiseAI**:
 
 
+
+# Use Cases 
 ---
 
 ### **1. Document Processing Assistant**
