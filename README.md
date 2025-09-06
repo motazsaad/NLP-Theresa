@@ -63,7 +63,7 @@ Speech and Language Processing (3rd ed. draft) by Dan Jurafsky and James H. Mart
 
 ## Assessment Criteria
 
-*   Final Pass/Fail Exam 
+*   Final Pass/Fail Exam OR Project OR paper presentation
 
 
 # Copyright Notics 
