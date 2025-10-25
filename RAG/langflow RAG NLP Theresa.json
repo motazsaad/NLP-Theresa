@@ -124,9 +124,9 @@
           "sourceHandle": {
             "dataType": "File",
             "id": "File-0vlyb",
-            "name": "message",
+            "name": "dataframe",
             "output_types": [
-              "Message"
+              "DataFrame"
             ]
           },
           "targetHandle": {
@@ -140,15 +140,73 @@
             "type": "other"
           }
         },
-        "id": "reactflow__edge-File-0vlyb{œdataTypeœ:œFileœ,œidœ:œFile-0vlybœ,œnameœ:œmessageœ,œoutput_typesœ:[œMessageœ]}-SplitText-fVGuB{œfieldNameœ:œdata_inputsœ,œidœ:œSplitText-fVGuBœ,œinputTypesœ:[œDataœ,œDataFrameœ,œMessageœ],œtypeœ:œotherœ}",
+        "id": "xy-edge__File-0vlyb{œdataTypeœ:œFileœ,œidœ:œFile-0vlybœ,œnameœ:œdataframeœ,œoutput_typesœ:[œDataFrameœ]}-SplitText-fVGuB{œfieldNameœ:œdata_inputsœ,œidœ:œSplitText-fVGuBœ,œinputTypesœ:[œDataœ,œDataFrameœ,œMessageœ],œtypeœ:œotherœ}",
         "selected": false,
         "source": "File-0vlyb",
-        "sourceHandle": "{œdataTypeœ:œFileœ,œidœ:œFile-0vlybœ,œnameœ:œmessageœ,œoutput_typesœ:[œMessageœ]}",
+        "sourceHandle": "{œdataTypeœ:œFileœ,œidœ:œFile-0vlybœ,œnameœ:œdataframeœ,œoutput_typesœ:[œDataFrameœ]}",
         "target": "SplitText-fVGuB",
         "targetHandle": "{œfieldNameœ:œdata_inputsœ,œidœ:œSplitText-fVGuBœ,œinputTypesœ:[œDataœ,œDataFrameœ,œMessageœ],œtypeœ:œotherœ}"
       },
       {
         "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "OpenAIEmbeddings",
+            "id": "OpenAIEmbeddings-QUamc",
+            "name": "embeddings",
+            "output_types": [
+              "Embeddings"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "embedding",
+            "id": "Redis-XMkBe",
+            "inputTypes": [
+              "Embeddings"
+            ],
+            "type": "other"
+          }
+        },
+        "id": "xy-edge__OpenAIEmbeddings-QUamc{œdataTypeœ:œOpenAIEmbeddingsœ,œidœ:œOpenAIEmbeddings-QUamcœ,œnameœ:œembeddingsœ,œoutput_typesœ:[œEmbeddingsœ]}-Redis-XMkBe{œfieldNameœ:œembeddingœ,œidœ:œRedis-XMkBeœ,œinputTypesœ:[œEmbeddingsœ],œtypeœ:œotherœ}",
+        "selected": false,
+        "source": "OpenAIEmbeddings-QUamc",
+        "sourceHandle": "{œdataTypeœ:œOpenAIEmbeddingsœ,œidœ:œOpenAIEmbeddings-QUamcœ,œnameœ:œembeddingsœ,œoutput_typesœ:[œEmbeddingsœ]}",
+        "target": "Redis-XMkBe",
+        "targetHandle": "{œfieldNameœ:œembeddingœ,œidœ:œRedis-XMkBeœ,œinputTypesœ:[œEmbeddingsœ],œtypeœ:œotherœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "SplitText",
+            "id": "SplitText-fVGuB",
+            "name": "dataframe",
+            "output_types": [
+              "DataFrame"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "ingest_data",
+            "id": "Redis-XMkBe",
+            "inputTypes": [
+              "Data",
+              "DataFrame"
+            ],
+            "type": "other"
+          }
+        },
+        "id": "xy-edge__SplitText-fVGuB{œdataTypeœ:œSplitTextœ,œidœ:œSplitText-fVGuBœ,œnameœ:œdataframeœ,œoutput_typesœ:[œDataFrameœ]}-Redis-XMkBe{œfieldNameœ:œingest_dataœ,œidœ:œRedis-XMkBeœ,œinputTypesœ:[œDataœ,œDataFrameœ],œtypeœ:œotherœ}",
+        "selected": false,
+        "source": "SplitText-fVGuB",
+        "sourceHandle": "{œdataTypeœ:œSplitTextœ,œidœ:œSplitText-fVGuBœ,œnameœ:œdataframeœ,œoutput_typesœ:[œDataFrameœ]}",
+        "target": "Redis-XMkBe",
+        "targetHandle": "{œfieldNameœ:œingest_dataœ,œidœ:œRedis-XMkBeœ,œinputTypesœ:[œDataœ,œDataFrameœ],œtypeœ:œotherœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
         "data": {
           "sourceHandle": {
             "dataType": "OpenAIEmbeddings",
@@ -160,26 +218,55 @@
           },
           "targetHandle": {
             "fieldName": "embedding",
-            "id": "Chroma-JMwGg",
+            "id": "Redis-vlrt9",
             "inputTypes": [
               "Embeddings"
             ],
             "type": "other"
           }
         },
-        "id": "xy-edge__OpenAIEmbeddings-LMuH3{œdataTypeœ:œOpenAIEmbeddingsœ,œidœ:œOpenAIEmbeddings-LMuH3œ,œnameœ:œembeddingsœ,œoutput_typesœ:[œEmbeddingsœ]}-Chroma-JMwGg{œfieldNameœ:œembeddingœ,œidœ:œChroma-JMwGgœ,œinputTypesœ:[œEmbeddingsœ],œtypeœ:œotherœ}",
+        "id": "xy-edge__OpenAIEmbeddings-LMuH3{œdataTypeœ:œOpenAIEmbeddingsœ,œidœ:œOpenAIEmbeddings-LMuH3œ,œnameœ:œembeddingsœ,œoutput_typesœ:[œEmbeddingsœ]}-Redis-vlrt9{œfieldNameœ:œembeddingœ,œidœ:œRedis-vlrt9œ,œinputTypesœ:[œEmbeddingsœ],œtypeœ:œotherœ}",
         "selected": false,
         "source": "OpenAIEmbeddings-LMuH3",
         "sourceHandle": "{œdataTypeœ:œOpenAIEmbeddingsœ,œidœ:œOpenAIEmbeddings-LMuH3œ,œnameœ:œembeddingsœ,œoutput_typesœ:[œEmbeddingsœ]}",
-        "target": "Chroma-JMwGg",
-        "targetHandle": "{œfieldNameœ:œembeddingœ,œidœ:œChroma-JMwGgœ,œinputTypesœ:[œEmbeddingsœ],œtypeœ:œotherœ}"
+        "target": "Redis-vlrt9",
+        "targetHandle": "{œfieldNameœ:œembeddingœ,œidœ:œRedis-vlrt9œ,œinputTypesœ:[œEmbeddingsœ],œtypeœ:œotherœ}"
       },
       {
         "animated": false,
+        "className": "",
         "data": {
           "sourceHandle": {
-            "dataType": "Chroma",
-            "id": "Chroma-JMwGg",
+            "dataType": "ChatInput",
+            "id": "ChatInput-blbdK",
+            "name": "message",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "search_query",
+            "id": "Redis-vlrt9",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "query"
+          }
+        },
+        "id": "xy-edge__ChatInput-blbdK{œdataTypeœ:œChatInputœ,œidœ:œChatInput-blbdKœ,œnameœ:œmessageœ,œoutput_typesœ:[œMessageœ]}-Redis-vlrt9{œfieldNameœ:œsearch_queryœ,œidœ:œRedis-vlrt9œ,œinputTypesœ:[œMessageœ],œtypeœ:œqueryœ}",
+        "selected": false,
+        "source": "ChatInput-blbdK",
+        "sourceHandle": "{œdataTypeœ:œChatInputœ,œidœ:œChatInput-blbdKœ,œnameœ:œmessageœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "Redis-vlrt9",
+        "targetHandle": "{œfieldNameœ:œsearch_queryœ,œidœ:œRedis-vlrt9œ,œinputTypesœ:[œMessageœ],œtypeœ:œqueryœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "Redis",
+            "id": "Redis-vlrt9",
             "name": "dataframe",
             "output_types": [
               "DataFrame"
@@ -195,63 +282,12 @@
             "type": "other"
           }
         },
-        "id": "xy-edge__Chroma-JMwGg{œdataTypeœ:œChromaœ,œidœ:œChroma-JMwGgœ,œnameœ:œdataframeœ,œoutput_typesœ:[œDataFrameœ]}-parser-n6A0J{œfieldNameœ:œinput_dataœ,œidœ:œparser-n6A0Jœ,œinputTypesœ:[œDataFrameœ,œDataœ],œtypeœ:œotherœ}",
+        "id": "xy-edge__Redis-vlrt9{œdataTypeœ:œRedisœ,œidœ:œRedis-vlrt9œ,œnameœ:œdataframeœ,œoutput_typesœ:[œDataFrameœ]}-parser-n6A0J{œfieldNameœ:œinput_dataœ,œidœ:œparser-n6A0Jœ,œinputTypesœ:[œDataFrameœ,œDataœ],œtypeœ:œotherœ}",
         "selected": false,
-        "source": "Chroma-JMwGg",
-        "sourceHandle": "{œdataTypeœ:œChromaœ,œidœ:œChroma-JMwGgœ,œnameœ:œdataframeœ,œoutput_typesœ:[œDataFrameœ]}",
+        "source": "Redis-vlrt9",
+        "sourceHandle": "{œdataTypeœ:œRedisœ,œidœ:œRedis-vlrt9œ,œnameœ:œdataframeœ,œoutput_typesœ:[œDataFrameœ]}",
         "target": "parser-n6A0J",
         "targetHandle": "{œfieldNameœ:œinput_dataœ,œidœ:œparser-n6A0Jœ,œinputTypesœ:[œDataFrameœ,œDataœ],œtypeœ:œotherœ}"
-      },
-      {
-        "data": {
-          "sourceHandle": {
-            "dataType": "OpenAIEmbeddings",
-            "id": "OpenAIEmbeddings-QUamc",
-            "name": "embeddings",
-            "output_types": [
-              "Embeddings"
-            ]
-          },
-          "targetHandle": {
-            "fieldName": "embedding",
-            "id": "Chroma-XsxaX",
-            "inputTypes": [
-              "Embeddings"
-            ],
-            "type": "other"
-          }
-        },
-        "id": "xy-edge__OpenAIEmbeddings-QUamc{œdataTypeœ:œOpenAIEmbeddingsœ,œidœ:œOpenAIEmbeddings-QUamcœ,œnameœ:œembeddingsœ,œoutput_typesœ:[œEmbeddingsœ]}-Chroma-XsxaX{œfieldNameœ:œembeddingœ,œidœ:œChroma-XsxaXœ,œinputTypesœ:[œEmbeddingsœ],œtypeœ:œotherœ}",
-        "source": "OpenAIEmbeddings-QUamc",
-        "sourceHandle": "{œdataTypeœ:œOpenAIEmbeddingsœ,œidœ:œOpenAIEmbeddings-QUamcœ,œnameœ:œembeddingsœ,œoutput_typesœ:[œEmbeddingsœ]}",
-        "target": "Chroma-XsxaX",
-        "targetHandle": "{œfieldNameœ:œembeddingœ,œidœ:œChroma-XsxaXœ,œinputTypesœ:[œEmbeddingsœ],œtypeœ:œotherœ}"
-      },
-      {
-        "data": {
-          "sourceHandle": {
-            "dataType": "SplitText",
-            "id": "SplitText-fVGuB",
-            "name": "dataframe",
-            "output_types": [
-              "DataFrame"
-            ]
-          },
-          "targetHandle": {
-            "fieldName": "ingest_data",
-            "id": "Chroma-XsxaX",
-            "inputTypes": [
-              "Data",
-              "DataFrame"
-            ],
-            "type": "other"
-          }
-        },
-        "id": "xy-edge__SplitText-fVGuB{œdataTypeœ:œSplitTextœ,œidœ:œSplitText-fVGuBœ,œnameœ:œdataframeœ,œoutput_typesœ:[œDataFrameœ]}-Chroma-XsxaX{œfieldNameœ:œingest_dataœ,œidœ:œChroma-XsxaXœ,œinputTypesœ:[œDataœ,œDataFrameœ],œtypeœ:œotherœ}",
-        "source": "SplitText-fVGuB",
-        "sourceHandle": "{œdataTypeœ:œSplitTextœ,œidœ:œSplitText-fVGuBœ,œnameœ:œdataframeœ,œoutput_typesœ:[œDataFrameœ]}",
-        "target": "Chroma-XsxaX",
-        "targetHandle": "{œfieldNameœ:œingest_dataœ,œidœ:œChroma-XsxaXœ,œinputTypesœ:[œDataœ,œDataFrameœ],œtypeœ:œotherœ}"
       }
     ],
     "nodes": [
@@ -282,7 +318,7 @@
             "frozen": false,
             "icon": "MessagesSquare",
             "legacy": false,
-            "lf_version": "1.2.0",
+            "lf_version": "1.6.4",
             "metadata": {},
             "output_types": [],
             "outputs": [
@@ -512,7 +548,7 @@
             "is_input": null,
             "is_output": null,
             "legacy": false,
-            "lf_version": "1.1.1",
+            "lf_version": "1.6.4",
             "metadata": {
               "code_hash": "3bf0b511e227",
               "module": "langflow.components.prompts.prompt.PromptComponent"
@@ -690,7 +726,7 @@
             "frozen": false,
             "icon": "scissors-line-dashed",
             "legacy": false,
-            "lf_version": "1.1.1",
+            "lf_version": "1.6.4",
             "metadata": {},
             "output_types": [],
             "outputs": [
@@ -976,7 +1012,7 @@
             "frozen": false,
             "icon": "MessagesSquare",
             "legacy": false,
-            "lf_version": "1.1.1",
+            "lf_version": "1.6.4",
             "metadata": {},
             "output_types": [],
             "outputs": [
@@ -1206,7 +1242,7 @@
             "frozen": false,
             "icon": "OpenAI",
             "legacy": false,
-            "lf_version": "1.2.0",
+            "lf_version": "1.6.4",
             "metadata": {},
             "output_types": [],
             "outputs": [
@@ -1739,7 +1775,7 @@
             "frozen": false,
             "icon": "OpenAI",
             "legacy": false,
-            "lf_version": "1.1.1",
+            "lf_version": "1.6.4",
             "metadata": {},
             "output_types": [],
             "outputs": [
@@ -2316,6 +2352,7 @@
             "icon": "braces",
             "key": "parser",
             "legacy": false,
+            "lf_version": "1.6.4",
             "metadata": {},
             "minimized": false,
             "output_types": [],
@@ -2493,8 +2530,9 @@
             ],
             "frozen": false,
             "icon": "brain-circuit",
-            "last_updated": "2025-10-25T06:15:39.762Z",
+            "last_updated": "2025-10-25T07:17:18.904Z",
             "legacy": false,
+            "lf_version": "1.6.4",
             "metadata": {
               "keywords": [
                 "model",
@@ -2632,7 +2670,7 @@
                 "tool_mode": false,
                 "trace_as_metadata": true,
                 "type": "str",
-                "value": "gpt-4.1"
+                "value": "gpt-4.1-nano"
               },
               "provider": {
                 "_input_type": "DropdownInput",
@@ -2795,8 +2833,9 @@
             ],
             "frozen": false,
             "icon": "file-text",
-            "last_updated": "2025-10-25T06:15:40.116Z",
+            "last_updated": "2025-10-25T07:17:18.909Z",
             "legacy": false,
+            "lf_version": "1.6.4",
             "metadata": {},
             "minimized": false,
             "output_types": [],
@@ -2804,16 +2843,17 @@
               {
                 "allows_loop": false,
                 "cache": true,
-                "display_name": "Raw Content",
+                "display_name": "Files",
                 "group_outputs": false,
-                "method": "load_files_message",
-                "name": "message",
+                "hidden": null,
+                "method": "load_files",
+                "name": "dataframe",
                 "options": null,
                 "required_inputs": null,
-                "selected": "Message",
+                "selected": "DataFrame",
                 "tool_mode": true,
                 "types": [
-                  "Message"
+                  "DataFrame"
                 ],
                 "value": "__UNDEFINED__"
               }
@@ -3104,7 +3144,12 @@
                   "bz2",
                   "gz"
                 ],
-                "file_path": [],
+                "file_path": [
+                  "34aad736-5d66-4657-a66b-df20a1434bb0/Comprehensive Employee Benefits Guide.md",
+                  "34aad736-5d66-4657-a66b-df20a1434bb0/HR Policy Paid and Unpaid Time Off.md",
+                  "34aad736-5d66-4657-a66b-df20a1434bb0/Office Facilities Guide and Security Procedures.md",
+                  "34aad736-5d66-4657-a66b-df20a1434bb0/Payroll and Compensation Guide.md"
+                ],
                 "info": "Supported file extensions: csv, json, pdf, txt, md, mdx, yaml, yml, xml, html, htm, docx, py, sh, sql, js, ts, tsx, adoc, asciidoc, asc, bmp, dotx, dotm, docm, jpeg, png, potx, ppsx, pptm, potm, ppsm, pptx, tiff, xls, xlsx, xhtml, webp; optionally bundled in file extensions: zip, tar, tgz, bz2, gz",
                 "list": true,
                 "list_add_label": "Add More",
@@ -3208,7 +3253,7 @@
         "dragging": false,
         "id": "File-0vlyb",
         "measured": {
-          "height": 213,
+          "height": 349,
           "width": 320
         },
         "position": {
@@ -3220,443 +3265,36 @@
       },
       {
         "data": {
-          "id": "Chroma-JMwGg",
+          "id": "Redis-XMkBe",
           "node": {
             "base_classes": [
               "Data",
               "DataFrame"
             ],
             "beta": false,
-            "category": "chroma",
+            "category": "redis",
             "conditional_paths": [],
             "custom_fields": {},
-            "description": "Chroma Vector Store with search capabilities",
-            "display_name": "Chroma DB",
+            "description": "Implementation of Vector Store using Redis",
+            "display_name": "Redis",
             "documentation": "",
             "edited": false,
             "field_order": [
-              "collection_name",
-              "persist_directory",
+              "redis_server_url",
+              "redis_index_name",
+              "code",
+              "schema",
               "ingest_data",
               "search_query",
               "should_cache_vector_store",
-              "embedding",
-              "chroma_server_cors_allow_origins",
-              "chroma_server_host",
-              "chroma_server_http_port",
-              "chroma_server_grpc_port",
-              "chroma_server_ssl_enabled",
-              "allow_duplicates",
-              "search_type",
               "number_of_results",
-              "limit"
+              "embedding"
             ],
             "frozen": false,
-            "icon": "Chroma",
-            "key": "Chroma",
+            "icon": "Redis",
+            "key": "Redis",
             "legacy": false,
-            "metadata": {},
-            "minimized": false,
-            "output_types": [],
-            "outputs": [
-              {
-                "allows_loop": false,
-                "cache": true,
-                "display_name": "Search Results",
-                "group_outputs": false,
-                "method": "search_documents",
-                "name": "search_results",
-                "tool_mode": true,
-                "types": [
-                  "Data"
-                ],
-                "value": "__UNDEFINED__"
-              },
-              {
-                "allows_loop": false,
-                "cache": true,
-                "display_name": "DataFrame",
-                "group_outputs": false,
-                "method": "as_dataframe",
-                "name": "dataframe",
-                "selected": "DataFrame",
-                "tool_mode": true,
-                "types": [
-                  "DataFrame"
-                ],
-                "value": "__UNDEFINED__"
-              }
-            ],
-            "pinned": false,
-            "score": 4.518559443749226e-7,
-            "template": {
-              "_type": "Component",
-              "allow_duplicates": {
-                "_input_type": "BoolInput",
-                "advanced": true,
-                "display_name": "Allow Duplicates",
-                "dynamic": false,
-                "info": "If false, will not add documents that are already in the Vector Store.",
-                "list": false,
-                "list_add_label": "Add More",
-                "name": "allow_duplicates",
-                "placeholder": "",
-                "required": false,
-                "show": true,
-                "title_case": false,
-                "tool_mode": false,
-                "trace_as_metadata": true,
-                "type": "bool",
-                "value": false
-              },
-              "chroma_server_cors_allow_origins": {
-                "_input_type": "StrInput",
-                "advanced": true,
-                "display_name": "Server CORS Allow Origins",
-                "dynamic": false,
-                "info": "",
-                "list": false,
-                "list_add_label": "Add More",
-                "load_from_db": false,
-                "name": "chroma_server_cors_allow_origins",
-                "placeholder": "",
-                "required": false,
-                "show": true,
-                "title_case": false,
-                "tool_mode": false,
-                "trace_as_metadata": true,
-                "type": "str",
-                "value": ""
-              },
-              "chroma_server_grpc_port": {
-                "_input_type": "IntInput",
-                "advanced": true,
-                "display_name": "Server gRPC Port",
-                "dynamic": false,
-                "info": "",
-                "list": false,
-                "list_add_label": "Add More",
-                "name": "chroma_server_grpc_port",
-                "placeholder": "",
-                "required": false,
-                "show": true,
-                "title_case": false,
-                "tool_mode": false,
-                "trace_as_metadata": true,
-                "type": "int",
-                "value": ""
-              },
-              "chroma_server_host": {
-                "_input_type": "StrInput",
-                "advanced": true,
-                "display_name": "Server Host",
-                "dynamic": false,
-                "info": "",
-                "list": false,
-                "list_add_label": "Add More",
-                "load_from_db": false,
-                "name": "chroma_server_host",
-                "placeholder": "",
-                "required": false,
-                "show": true,
-                "title_case": false,
-                "tool_mode": false,
-                "trace_as_metadata": true,
-                "type": "str",
-                "value": ""
-              },
-              "chroma_server_http_port": {
-                "_input_type": "IntInput",
-                "advanced": true,
-                "display_name": "Server HTTP Port",
-                "dynamic": false,
-                "info": "",
-                "list": false,
-                "list_add_label": "Add More",
-                "name": "chroma_server_http_port",
-                "placeholder": "",
-                "required": false,
-                "show": true,
-                "title_case": false,
-                "tool_mode": false,
-                "trace_as_metadata": true,
-                "type": "int",
-                "value": ""
-              },
-              "chroma_server_ssl_enabled": {
-                "_input_type": "BoolInput",
-                "advanced": true,
-                "display_name": "Server SSL Enabled",
-                "dynamic": false,
-                "info": "",
-                "list": false,
-                "list_add_label": "Add More",
-                "name": "chroma_server_ssl_enabled",
-                "placeholder": "",
-                "required": false,
-                "show": true,
-                "title_case": false,
-                "tool_mode": false,
-                "trace_as_metadata": true,
-                "type": "bool",
-                "value": false
-              },
-              "code": {
-                "advanced": true,
-                "dynamic": true,
-                "fileTypes": [],
-                "file_path": "",
-                "info": "",
-                "list": false,
-                "load_from_db": false,
-                "multiline": true,
-                "name": "code",
-                "password": false,
-                "placeholder": "",
-                "required": true,
-                "show": true,
-                "title_case": false,
-                "type": "code",
-                "value": "from copy import deepcopy\nfrom typing import TYPE_CHECKING\n\nfrom chromadb.config import Settings\nfrom langchain_chroma import Chroma\nfrom typing_extensions import override\n\nfrom langflow.base.vectorstores.model import LCVectorStoreComponent, check_cached_vector_store\nfrom langflow.base.vectorstores.utils import chroma_collection_to_data\nfrom langflow.inputs.inputs import BoolInput, DropdownInput, HandleInput, IntInput, StrInput\nfrom langflow.schema.data import Data\n\nif TYPE_CHECKING:\n    from langflow.schema.dataframe import DataFrame\n\n\nclass ChromaVectorStoreComponent(LCVectorStoreComponent):\n    \"\"\"Chroma Vector Store with search capabilities.\"\"\"\n\n    display_name: str = \"Chroma DB\"\n    description: str = \"Chroma Vector Store with search capabilities\"\n    name = \"Chroma\"\n    icon = \"Chroma\"\n\n    inputs = [\n        StrInput(\n            name=\"collection_name\",\n            display_name=\"Collection Name\",\n            value=\"langflow\",\n        ),\n        StrInput(\n            name=\"persist_directory\",\n            display_name=\"Persist Directory\",\n        ),\n        *LCVectorStoreComponent.inputs,\n        HandleInput(name=\"embedding\", display_name=\"Embedding\", input_types=[\"Embeddings\"]),\n        StrInput(\n            name=\"chroma_server_cors_allow_origins\",\n            display_name=\"Server CORS Allow Origins\",\n            advanced=True,\n        ),\n        StrInput(\n            name=\"chroma_server_host\",\n            display_name=\"Server Host\",\n            advanced=True,\n        ),\n        IntInput(\n            name=\"chroma_server_http_port\",\n            display_name=\"Server HTTP Port\",\n            advanced=True,\n        ),\n        IntInput(\n            name=\"chroma_server_grpc_port\",\n            display_name=\"Server gRPC Port\",\n            advanced=True,\n        ),\n        BoolInput(\n            name=\"chroma_server_ssl_enabled\",\n            display_name=\"Server SSL Enabled\",\n            advanced=True,\n        ),\n        BoolInput(\n            name=\"allow_duplicates\",\n            display_name=\"Allow Duplicates\",\n            advanced=True,\n            info=\"If false, will not add documents that are already in the Vector Store.\",\n        ),\n        DropdownInput(\n            name=\"search_type\",\n            display_name=\"Search Type\",\n            options=[\"Similarity\", \"MMR\"],\n            value=\"Similarity\",\n            advanced=True,\n        ),\n        IntInput(\n            name=\"number_of_results\",\n            display_name=\"Number of Results\",\n            info=\"Number of results to return.\",\n            advanced=True,\n            value=10,\n        ),\n        IntInput(\n            name=\"limit\",\n            display_name=\"Limit\",\n            advanced=True,\n            info=\"Limit the number of records to compare when Allow Duplicates is False.\",\n        ),\n    ]\n\n    @override\n    @check_cached_vector_store\n    def build_vector_store(self) -> Chroma:\n        \"\"\"Builds the Chroma object.\"\"\"\n        try:\n            from chromadb import Client\n            from langchain_chroma import Chroma\n        except ImportError as e:\n            msg = \"Could not import Chroma integration package. Please install it with `pip install langchain-chroma`.\"\n            raise ImportError(msg) from e\n        # Chroma settings\n        chroma_settings = None\n        client = None\n        if self.chroma_server_host:\n            chroma_settings = Settings(\n                chroma_server_cors_allow_origins=self.chroma_server_cors_allow_origins or [],\n                chroma_server_host=self.chroma_server_host,\n                chroma_server_http_port=self.chroma_server_http_port or None,\n                chroma_server_grpc_port=self.chroma_server_grpc_port or None,\n                chroma_server_ssl_enabled=self.chroma_server_ssl_enabled,\n            )\n            client = Client(settings=chroma_settings)\n\n        # Check persist_directory and expand it if it is a relative path\n        persist_directory = self.resolve_path(self.persist_directory) if self.persist_directory is not None else None\n\n        chroma = Chroma(\n            persist_directory=persist_directory,\n            client=client,\n            embedding_function=self.embedding,\n            collection_name=self.collection_name,\n        )\n\n        self._add_documents_to_vector_store(chroma)\n        limit = int(self.limit) if self.limit is not None and str(self.limit).strip() else None\n        self.status = chroma_collection_to_data(chroma.get(limit=limit))\n        return chroma\n\n    def _add_documents_to_vector_store(self, vector_store: \"Chroma\") -> None:\n        \"\"\"Adds documents to the Vector Store.\"\"\"\n        ingest_data: list | Data | DataFrame = self.ingest_data\n        if not ingest_data:\n            self.status = \"\"\n            return\n\n        # Convert DataFrame to Data if needed using parent's method\n        ingest_data = self._prepare_ingest_data()\n\n        stored_documents_without_id = []\n        if self.allow_duplicates:\n            stored_data = []\n        else:\n            limit = int(self.limit) if self.limit is not None and str(self.limit).strip() else None\n            stored_data = chroma_collection_to_data(vector_store.get(limit=limit))\n            for value in deepcopy(stored_data):\n                del value.id\n                stored_documents_without_id.append(value)\n\n        documents = []\n        for _input in ingest_data or []:\n            if isinstance(_input, Data):\n                if _input not in stored_documents_without_id:\n                    documents.append(_input.to_lc_document())\n            else:\n                msg = \"Vector Store Inputs must be Data objects.\"\n                raise TypeError(msg)\n\n        if documents and self.embedding is not None:\n            self.log(f\"Adding {len(documents)} documents to the Vector Store.\")\n            # Filter complex metadata to prevent ChromaDB errors\n            try:\n                from langchain_community.vectorstores.utils import filter_complex_metadata\n\n                filtered_documents = filter_complex_metadata(documents)\n                vector_store.add_documents(filtered_documents)\n            except ImportError:\n                self.log(\"Warning: Could not import filter_complex_metadata. Adding documents without filtering.\")\n                vector_store.add_documents(documents)\n        else:\n            self.log(\"No documents to add to the Vector Store.\")\n"
-              },
-              "collection_name": {
-                "_input_type": "StrInput",
-                "advanced": false,
-                "display_name": "Collection Name",
-                "dynamic": false,
-                "info": "",
-                "list": false,
-                "list_add_label": "Add More",
-                "load_from_db": false,
-                "name": "collection_name",
-                "placeholder": "",
-                "required": false,
-                "show": true,
-                "title_case": false,
-                "tool_mode": false,
-                "trace_as_metadata": true,
-                "type": "str",
-                "value": "langflow"
-              },
-              "embedding": {
-                "_input_type": "HandleInput",
-                "advanced": false,
-                "display_name": "Embedding",
-                "dynamic": false,
-                "info": "",
-                "input_types": [
-                  "Embeddings"
-                ],
-                "list": false,
-                "list_add_label": "Add More",
-                "name": "embedding",
-                "placeholder": "",
-                "required": false,
-                "show": true,
-                "title_case": false,
-                "trace_as_metadata": true,
-                "type": "other",
-                "value": ""
-              },
-              "ingest_data": {
-                "_input_type": "HandleInput",
-                "advanced": false,
-                "display_name": "Ingest Data",
-                "dynamic": false,
-                "info": "",
-                "input_types": [
-                  "Data",
-                  "DataFrame"
-                ],
-                "list": true,
-                "list_add_label": "Add More",
-                "name": "ingest_data",
-                "placeholder": "",
-                "required": false,
-                "show": true,
-                "title_case": false,
-                "trace_as_metadata": true,
-                "type": "other",
-                "value": ""
-              },
-              "limit": {
-                "_input_type": "IntInput",
-                "advanced": true,
-                "display_name": "Limit",
-                "dynamic": false,
-                "info": "Limit the number of records to compare when Allow Duplicates is False.",
-                "list": false,
-                "list_add_label": "Add More",
-                "name": "limit",
-                "placeholder": "",
-                "required": false,
-                "show": true,
-                "title_case": false,
-                "tool_mode": false,
-                "trace_as_metadata": true,
-                "type": "int",
-                "value": ""
-              },
-              "number_of_results": {
-                "_input_type": "IntInput",
-                "advanced": true,
-                "display_name": "Number of Results",
-                "dynamic": false,
-                "info": "Number of results to return.",
-                "list": false,
-                "list_add_label": "Add More",
-                "name": "number_of_results",
-                "placeholder": "",
-                "required": false,
-                "show": true,
-                "title_case": false,
-                "tool_mode": false,
-                "trace_as_metadata": true,
-                "type": "int",
-                "value": 10
-              },
-              "persist_directory": {
-                "_input_type": "StrInput",
-                "advanced": false,
-                "display_name": "Persist Directory",
-                "dynamic": false,
-                "info": "",
-                "list": false,
-                "list_add_label": "Add More",
-                "load_from_db": false,
-                "name": "persist_directory",
-                "placeholder": "",
-                "required": false,
-                "show": true,
-                "title_case": false,
-                "tool_mode": false,
-                "trace_as_metadata": true,
-                "type": "str",
-                "value": ""
-              },
-              "search_query": {
-                "_input_type": "QueryInput",
-                "advanced": false,
-                "display_name": "Search Query",
-                "dynamic": false,
-                "info": "Enter a query to run a similarity search.",
-                "input_types": [
-                  "Message"
-                ],
-                "list": false,
-                "list_add_label": "Add More",
-                "load_from_db": false,
-                "name": "search_query",
-                "placeholder": "Enter a query...",
-                "required": false,
-                "show": true,
-                "title_case": false,
-                "tool_mode": true,
-                "trace_as_input": true,
-                "trace_as_metadata": true,
-                "type": "query",
-                "value": ""
-              },
-              "search_type": {
-                "_input_type": "DropdownInput",
-                "advanced": true,
-                "combobox": false,
-                "dialog_inputs": {},
-                "display_name": "Search Type",
-                "dynamic": false,
-                "external_options": {},
-                "info": "",
-                "name": "search_type",
-                "options": [
-                  "Similarity",
-                  "MMR"
-                ],
-                "options_metadata": [],
-                "placeholder": "",
-                "required": false,
-                "show": true,
-                "title_case": false,
-                "toggle": false,
-                "tool_mode": false,
-                "trace_as_metadata": true,
-                "type": "str",
-                "value": "Similarity"
-              },
-              "should_cache_vector_store": {
-                "_input_type": "BoolInput",
-                "advanced": true,
-                "display_name": "Cache Vector Store",
-                "dynamic": false,
-                "info": "If True, the vector store will be cached for the current build of the component. This is useful for components that have multiple output methods and want to share the same vector store.",
-                "list": false,
-                "list_add_label": "Add More",
-                "name": "should_cache_vector_store",
-                "placeholder": "",
-                "required": false,
-                "show": true,
-                "title_case": false,
-                "tool_mode": false,
-                "trace_as_metadata": true,
-                "type": "bool",
-                "value": true
-              }
-            },
-            "tool_mode": false
-          },
-          "selected_output": "dataframe",
-          "showNode": true,
-          "type": "Chroma"
-        },
-        "dragging": false,
-        "id": "Chroma-JMwGg",
-        "measured": {
-          "height": 458,
-          "width": 320
-        },
-        "position": {
-          "x": 1198.4195470603058,
-          "y": 535.1261457074182
-        },
-        "selected": false,
-        "type": "genericNode"
-      },
-      {
-        "data": {
-          "id": "Chroma-XsxaX",
-          "node": {
-            "base_classes": [
-              "Data",
-              "DataFrame"
-            ],
-            "beta": false,
-            "category": "chroma",
-            "conditional_paths": [],
-            "custom_fields": {},
-            "description": "Chroma Vector Store with search capabilities",
-            "display_name": "Chroma DB",
-            "documentation": "",
-            "edited": false,
-            "field_order": [
-              "collection_name",
-              "persist_directory",
-              "ingest_data",
-              "search_query",
-              "should_cache_vector_store",
-              "embedding",
-              "chroma_server_cors_allow_origins",
-              "chroma_server_host",
-              "chroma_server_http_port",
-              "chroma_server_grpc_port",
-              "chroma_server_ssl_enabled",
-              "allow_duplicates",
-              "search_type",
-              "number_of_results",
-              "limit"
-            ],
-            "frozen": false,
-            "icon": "Chroma",
-            "key": "Chroma",
-            "legacy": false,
+            "lf_version": "1.6.4",
             "metadata": {},
             "minimized": false,
             "output_types": [],
@@ -3690,119 +3328,9 @@
               }
             ],
             "pinned": false,
-            "score": 4.518559443749226e-7,
+            "score": 4.930380657631324e-32,
             "template": {
               "_type": "Component",
-              "allow_duplicates": {
-                "_input_type": "BoolInput",
-                "advanced": true,
-                "display_name": "Allow Duplicates",
-                "dynamic": false,
-                "info": "If false, will not add documents that are already in the Vector Store.",
-                "list": false,
-                "list_add_label": "Add More",
-                "name": "allow_duplicates",
-                "placeholder": "",
-                "required": false,
-                "show": true,
-                "title_case": false,
-                "tool_mode": false,
-                "trace_as_metadata": true,
-                "type": "bool",
-                "value": false
-              },
-              "chroma_server_cors_allow_origins": {
-                "_input_type": "StrInput",
-                "advanced": true,
-                "display_name": "Server CORS Allow Origins",
-                "dynamic": false,
-                "info": "",
-                "list": false,
-                "list_add_label": "Add More",
-                "load_from_db": false,
-                "name": "chroma_server_cors_allow_origins",
-                "placeholder": "",
-                "required": false,
-                "show": true,
-                "title_case": false,
-                "tool_mode": false,
-                "trace_as_metadata": true,
-                "type": "str",
-                "value": ""
-              },
-              "chroma_server_grpc_port": {
-                "_input_type": "IntInput",
-                "advanced": true,
-                "display_name": "Server gRPC Port",
-                "dynamic": false,
-                "info": "",
-                "list": false,
-                "list_add_label": "Add More",
-                "name": "chroma_server_grpc_port",
-                "placeholder": "",
-                "required": false,
-                "show": true,
-                "title_case": false,
-                "tool_mode": false,
-                "trace_as_metadata": true,
-                "type": "int",
-                "value": ""
-              },
-              "chroma_server_host": {
-                "_input_type": "StrInput",
-                "advanced": true,
-                "display_name": "Server Host",
-                "dynamic": false,
-                "info": "",
-                "list": false,
-                "list_add_label": "Add More",
-                "load_from_db": false,
-                "name": "chroma_server_host",
-                "placeholder": "",
-                "required": false,
-                "show": true,
-                "title_case": false,
-                "tool_mode": false,
-                "trace_as_metadata": true,
-                "type": "str",
-                "value": ""
-              },
-              "chroma_server_http_port": {
-                "_input_type": "IntInput",
-                "advanced": true,
-                "display_name": "Server HTTP Port",
-                "dynamic": false,
-                "info": "",
-                "list": false,
-                "list_add_label": "Add More",
-                "name": "chroma_server_http_port",
-                "placeholder": "",
-                "required": false,
-                "show": true,
-                "title_case": false,
-                "tool_mode": false,
-                "trace_as_metadata": true,
-                "type": "int",
-                "value": ""
-              },
-              "chroma_server_ssl_enabled": {
-                "_input_type": "BoolInput",
-                "advanced": true,
-                "display_name": "Server SSL Enabled",
-                "dynamic": false,
-                "info": "",
-                "list": false,
-                "list_add_label": "Add More",
-                "name": "chroma_server_ssl_enabled",
-                "placeholder": "",
-                "required": false,
-                "show": true,
-                "title_case": false,
-                "tool_mode": false,
-                "trace_as_metadata": true,
-                "type": "bool",
-                "value": false
-              },
               "code": {
                 "advanced": true,
                 "dynamic": true,
@@ -3819,26 +3347,7 @@
                 "show": true,
                 "title_case": false,
                 "type": "code",
-                "value": "from copy import deepcopy\nfrom typing import TYPE_CHECKING\n\nfrom chromadb.config import Settings\nfrom langchain_chroma import Chroma\nfrom typing_extensions import override\n\nfrom langflow.base.vectorstores.model import LCVectorStoreComponent, check_cached_vector_store\nfrom langflow.base.vectorstores.utils import chroma_collection_to_data\nfrom langflow.inputs.inputs import BoolInput, DropdownInput, HandleInput, IntInput, StrInput\nfrom langflow.schema.data import Data\n\nif TYPE_CHECKING:\n    from langflow.schema.dataframe import DataFrame\n\n\nclass ChromaVectorStoreComponent(LCVectorStoreComponent):\n    \"\"\"Chroma Vector Store with search capabilities.\"\"\"\n\n    display_name: str = \"Chroma DB\"\n    description: str = \"Chroma Vector Store with search capabilities\"\n    name = \"Chroma\"\n    icon = \"Chroma\"\n\n    inputs = [\n        StrInput(\n            name=\"collection_name\",\n            display_name=\"Collection Name\",\n            value=\"langflow\",\n        ),\n        StrInput(\n            name=\"persist_directory\",\n            display_name=\"Persist Directory\",\n        ),\n        *LCVectorStoreComponent.inputs,\n        HandleInput(name=\"embedding\", display_name=\"Embedding\", input_types=[\"Embeddings\"]),\n        StrInput(\n            name=\"chroma_server_cors_allow_origins\",\n            display_name=\"Server CORS Allow Origins\",\n            advanced=True,\n        ),\n        StrInput(\n            name=\"chroma_server_host\",\n            display_name=\"Server Host\",\n            advanced=True,\n        ),\n        IntInput(\n            name=\"chroma_server_http_port\",\n            display_name=\"Server HTTP Port\",\n            advanced=True,\n        ),\n        IntInput(\n            name=\"chroma_server_grpc_port\",\n            display_name=\"Server gRPC Port\",\n            advanced=True,\n        ),\n        BoolInput(\n            name=\"chroma_server_ssl_enabled\",\n            display_name=\"Server SSL Enabled\",\n            advanced=True,\n        ),\n        BoolInput(\n            name=\"allow_duplicates\",\n            display_name=\"Allow Duplicates\",\n            advanced=True,\n            info=\"If false, will not add documents that are already in the Vector Store.\",\n        ),\n        DropdownInput(\n            name=\"search_type\",\n            display_name=\"Search Type\",\n            options=[\"Similarity\", \"MMR\"],\n            value=\"Similarity\",\n            advanced=True,\n        ),\n        IntInput(\n            name=\"number_of_results\",\n            display_name=\"Number of Results\",\n            info=\"Number of results to return.\",\n            advanced=True,\n            value=10,\n        ),\n        IntInput(\n            name=\"limit\",\n            display_name=\"Limit\",\n            advanced=True,\n            info=\"Limit the number of records to compare when Allow Duplicates is False.\",\n        ),\n    ]\n\n    @override\n    @check_cached_vector_store\n    def build_vector_store(self) -> Chroma:\n        \"\"\"Builds the Chroma object.\"\"\"\n        try:\n            from chromadb import Client\n            from langchain_chroma import Chroma\n        except ImportError as e:\n            msg = \"Could not import Chroma integration package. Please install it with `pip install langchain-chroma`.\"\n            raise ImportError(msg) from e\n        # Chroma settings\n        chroma_settings = None\n        client = None\n        if self.chroma_server_host:\n            chroma_settings = Settings(\n                chroma_server_cors_allow_origins=self.chroma_server_cors_allow_origins or [],\n                chroma_server_host=self.chroma_server_host,\n                chroma_server_http_port=self.chroma_server_http_port or None,\n                chroma_server_grpc_port=self.chroma_server_grpc_port or None,\n                chroma_server_ssl_enabled=self.chroma_server_ssl_enabled,\n            )\n            client = Client(settings=chroma_settings)\n\n        # Check persist_directory and expand it if it is a relative path\n        persist_directory = self.resolve_path(self.persist_directory) if self.persist_directory is not None else None\n\n        chroma = Chroma(\n            persist_directory=persist_directory,\n            client=client,\n            embedding_function=self.embedding,\n            collection_name=self.collection_name,\n        )\n\n        self._add_documents_to_vector_store(chroma)\n        limit = int(self.limit) if self.limit is not None and str(self.limit).strip() else None\n        self.status = chroma_collection_to_data(chroma.get(limit=limit))\n        return chroma\n\n    def _add_documents_to_vector_store(self, vector_store: \"Chroma\") -> None:\n        \"\"\"Adds documents to the Vector Store.\"\"\"\n        ingest_data: list | Data | DataFrame = self.ingest_data\n        if not ingest_data:\n            self.status = \"\"\n            return\n\n        # Convert DataFrame to Data if needed using parent's method\n        ingest_data = self._prepare_ingest_data()\n\n        stored_documents_without_id = []\n        if self.allow_duplicates:\n            stored_data = []\n        else:\n            limit = int(self.limit) if self.limit is not None and str(self.limit).strip() else None\n            stored_data = chroma_collection_to_data(vector_store.get(limit=limit))\n            for value in deepcopy(stored_data):\n                del value.id\n                stored_documents_without_id.append(value)\n\n        documents = []\n        for _input in ingest_data or []:\n            if isinstance(_input, Data):\n                if _input not in stored_documents_without_id:\n                    documents.append(_input.to_lc_document())\n            else:\n                msg = \"Vector Store Inputs must be Data objects.\"\n                raise TypeError(msg)\n\n        if documents and self.embedding is not None:\n            self.log(f\"Adding {len(documents)} documents to the Vector Store.\")\n            # Filter complex metadata to prevent ChromaDB errors\n            try:\n                from langchain_community.vectorstores.utils import filter_complex_metadata\n\n                filtered_documents = filter_complex_metadata(documents)\n                vector_store.add_documents(filtered_documents)\n            except ImportError:\n                self.log(\"Warning: Could not import filter_complex_metadata. Adding documents without filtering.\")\n                vector_store.add_documents(documents)\n        else:\n            self.log(\"No documents to add to the Vector Store.\")\n"
-              },
-              "collection_name": {
-                "_input_type": "StrInput",
-                "advanced": false,
-                "display_name": "Collection Name",
-                "dynamic": false,
-                "info": "",
-                "list": false,
-                "list_add_label": "Add More",
-                "load_from_db": false,
-                "name": "collection_name",
-                "placeholder": "",
-                "required": false,
-                "show": true,
-                "title_case": false,
-                "tool_mode": false,
-                "trace_as_metadata": true,
-                "type": "str",
-                "value": "langflow"
+                "value": "from pathlib import Path\n\nfrom langchain.text_splitter import CharacterTextSplitter\nfrom langchain_community.vectorstores.redis import Redis\n\nfrom langflow.base.vectorstores.model import LCVectorStoreComponent, check_cached_vector_store\nfrom langflow.helpers.data import docs_to_data\nfrom langflow.io import HandleInput, IntInput, SecretStrInput, StrInput\nfrom langflow.schema.data import Data\n\n\nclass RedisVectorStoreComponent(LCVectorStoreComponent):\n    \"\"\"A custom component for implementing a Vector Store using Redis.\"\"\"\n\n    display_name: str = \"Redis\"\n    description: str = \"Implementation of Vector Store using Redis\"\n    name = \"Redis\"\n    icon = \"Redis\"\n\n    inputs = [\n        SecretStrInput(name=\"redis_server_url\", display_name=\"Redis Server Connection String\", required=True),\n        StrInput(\n            name=\"redis_index_name\",\n            display_name=\"Redis Index\",\n        ),\n        StrInput(name=\"code\", display_name=\"Code\", advanced=True),\n        StrInput(\n            name=\"schema\",\n            display_name=\"Schema\",\n        ),\n        *LCVectorStoreComponent.inputs,\n        IntInput(\n            name=\"number_of_results\",\n            display_name=\"Number of Results\",\n            info=\"Number of results to return.\",\n            value=4,\n            advanced=True,\n        ),\n        HandleInput(name=\"embedding\", display_name=\"Embedding\", input_types=[\"Embeddings\"]),\n    ]\n\n    @check_cached_vector_store\n    def build_vector_store(self) -> Redis:\n        # Convert DataFrame to Data if needed using parent's method\n        self.ingest_data = self._prepare_ingest_data()\n\n        documents = []\n        for _input in self.ingest_data or []:\n            if isinstance(_input, Data):\n                documents.append(_input.to_lc_document())\n            else:\n                documents.append(_input)\n        Path(\"docuemnts.txt\").write_text(str(documents), encoding=\"utf-8\")\n\n        if not documents:\n            if self.schema is None:\n                msg = \"If no documents are provided, a schema must be provided.\"\n                raise ValueError(msg)\n            redis_vs = Redis.from_existing_index(\n                embedding=self.embedding,\n                index_name=self.redis_index_name,\n                schema=self.schema,\n                key_prefix=None,\n                redis_url=self.redis_server_url,\n            )\n        else:\n            text_splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=0)\n            docs = text_splitter.split_documents(documents)\n            redis_vs = Redis.from_documents(\n                documents=docs,\n                embedding=self.embedding,\n                redis_url=self.redis_server_url,\n                index_name=self.redis_index_name,\n            )\n        return redis_vs\n\n    def search_documents(self) -> list[Data]:\n        vector_store = self.build_vector_store()\n\n        if self.search_query and isinstance(self.search_query, str) and self.search_query.strip():\n            docs = vector_store.similarity_search(\n                query=self.search_query,\n                k=self.number_of_results,\n            )\n\n            data = docs_to_data(docs)\n            self.status = data\n            return data\n        return []\n"
               },
               "embedding": {
                 "_input_type": "HandleInput",
@@ -3881,24 +3390,6 @@
                 "type": "other",
                 "value": ""
               },
-              "limit": {
-                "_input_type": "IntInput",
-                "advanced": true,
-                "display_name": "Limit",
-                "dynamic": false,
-                "info": "Limit the number of records to compare when Allow Duplicates is False.",
-                "list": false,
-                "list_add_label": "Add More",
-                "name": "limit",
-                "placeholder": "",
-                "required": false,
-                "show": true,
-                "title_case": false,
-                "tool_mode": false,
-                "trace_as_metadata": true,
-                "type": "int",
-                "value": ""
-              },
               "number_of_results": {
                 "_input_type": "IntInput",
                 "advanced": true,
@@ -3915,18 +3406,54 @@
                 "tool_mode": false,
                 "trace_as_metadata": true,
                 "type": "int",
-                "value": 10
+                "value": 4
               },
-              "persist_directory": {
+              "redis_index_name": {
                 "_input_type": "StrInput",
                 "advanced": false,
-                "display_name": "Persist Directory",
+                "display_name": "Redis Index",
                 "dynamic": false,
                 "info": "",
                 "list": false,
                 "list_add_label": "Add More",
                 "load_from_db": false,
-                "name": "persist_directory",
+                "name": "redis_index_name",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "nlpIndex"
+              },
+              "redis_server_url": {
+                "_input_type": "SecretStrInput",
+                "advanced": false,
+                "display_name": "Redis Server Connection String",
+                "dynamic": false,
+                "info": "",
+                "input_types": [],
+                "load_from_db": false,
+                "name": "redis_server_url",
+                "password": true,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "str",
+                "value": ""
+              },
+              "schema": {
+                "_input_type": "StrInput",
+                "advanced": false,
+                "display_name": "Schema",
+                "dynamic": false,
+                "info": "",
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "schema",
                 "placeholder": "",
                 "required": false,
                 "show": true,
@@ -3959,31 +3486,6 @@
                 "type": "query",
                 "value": ""
               },
-              "search_type": {
-                "_input_type": "DropdownInput",
-                "advanced": true,
-                "combobox": false,
-                "dialog_inputs": {},
-                "display_name": "Search Type",
-                "dynamic": false,
-                "external_options": {},
-                "info": "",
-                "name": "search_type",
-                "options": [
-                  "Similarity",
-                  "MMR"
-                ],
-                "options_metadata": [],
-                "placeholder": "",
-                "required": false,
-                "show": true,
-                "title_case": false,
-                "toggle": false,
-                "tool_mode": false,
-                "trace_as_metadata": true,
-                "type": "str",
-                "value": "Similarity"
-              },
               "should_cache_vector_store": {
                 "_input_type": "BoolInput",
                 "advanced": true,
@@ -4007,26 +3509,287 @@
           },
           "selected_output": "search_results",
           "showNode": true,
-          "type": "Chroma"
+          "type": "Redis"
         },
         "dragging": false,
-        "id": "Chroma-XsxaX",
+        "id": "Redis-XMkBe",
         "measured": {
-          "height": 458,
+          "height": 540,
           "width": 320
         },
         "position": {
-          "x": 2113.5552005408776,
-          "y": 1566.6603578892493
+          "x": 2483.0454355269644,
+          "y": 1566.0261518474902
         },
-        "selected": true,
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "Redis-vlrt9",
+          "node": {
+            "base_classes": [
+              "Data",
+              "DataFrame"
+            ],
+            "beta": false,
+            "category": "redis",
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Implementation of Vector Store using Redis",
+            "display_name": "Redis",
+            "documentation": "",
+            "edited": false,
+            "field_order": [
+              "redis_server_url",
+              "redis_index_name",
+              "code",
+              "schema",
+              "ingest_data",
+              "search_query",
+              "should_cache_vector_store",
+              "number_of_results",
+              "embedding"
+            ],
+            "frozen": false,
+            "icon": "Redis",
+            "key": "Redis",
+            "legacy": false,
+            "lf_version": "1.6.4",
+            "metadata": {},
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Search Results",
+                "group_outputs": false,
+                "method": "search_documents",
+                "name": "search_results",
+                "tool_mode": true,
+                "types": [
+                  "Data"
+                ],
+                "value": "__UNDEFINED__"
+              },
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "DataFrame",
+                "group_outputs": false,
+                "method": "as_dataframe",
+                "name": "dataframe",
+                "selected": "DataFrame",
+                "tool_mode": true,
+                "types": [
+                  "DataFrame"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "score": 4.930380657631324e-32,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from pathlib import Path\n\nfrom langchain.text_splitter import CharacterTextSplitter\nfrom langchain_community.vectorstores.redis import Redis\n\nfrom langflow.base.vectorstores.model import LCVectorStoreComponent, check_cached_vector_store\nfrom langflow.helpers.data import docs_to_data\nfrom langflow.io import HandleInput, IntInput, SecretStrInput, StrInput\nfrom langflow.schema.data import Data\n\n\nclass RedisVectorStoreComponent(LCVectorStoreComponent):\n    \"\"\"A custom component for implementing a Vector Store using Redis.\"\"\"\n\n    display_name: str = \"Redis\"\n    description: str = \"Implementation of Vector Store using Redis\"\n    name = \"Redis\"\n    icon = \"Redis\"\n\n    inputs = [\n        SecretStrInput(name=\"redis_server_url\", display_name=\"Redis Server Connection String\", required=True),\n        StrInput(\n            name=\"redis_index_name\",\n            display_name=\"Redis Index\",\n        ),\n        StrInput(name=\"code\", display_name=\"Code\", advanced=True),\n        StrInput(\n            name=\"schema\",\n            display_name=\"Schema\",\n        ),\n        *LCVectorStoreComponent.inputs,\n        IntInput(\n            name=\"number_of_results\",\n            display_name=\"Number of Results\",\n            info=\"Number of results to return.\",\n            value=4,\n            advanced=True,\n        ),\n        HandleInput(name=\"embedding\", display_name=\"Embedding\", input_types=[\"Embeddings\"]),\n    ]\n\n    @check_cached_vector_store\n    def build_vector_store(self) -> Redis:\n        # Convert DataFrame to Data if needed using parent's method\n        self.ingest_data = self._prepare_ingest_data()\n\n        documents = []\n        for _input in self.ingest_data or []:\n            if isinstance(_input, Data):\n                documents.append(_input.to_lc_document())\n            else:\n                documents.append(_input)\n        Path(\"docuemnts.txt\").write_text(str(documents), encoding=\"utf-8\")\n\n        if not documents:\n            if self.schema is None:\n                msg = \"If no documents are provided, a schema must be provided.\"\n                raise ValueError(msg)\n            redis_vs = Redis.from_existing_index(\n                embedding=self.embedding,\n                index_name=self.redis_index_name,\n                schema=self.schema,\n                key_prefix=None,\n                redis_url=self.redis_server_url,\n            )\n        else:\n            text_splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=0)\n            docs = text_splitter.split_documents(documents)\n            redis_vs = Redis.from_documents(\n                documents=docs,\n                embedding=self.embedding,\n                redis_url=self.redis_server_url,\n                index_name=self.redis_index_name,\n            )\n        return redis_vs\n\n    def search_documents(self) -> list[Data]:\n        vector_store = self.build_vector_store()\n\n        if self.search_query and isinstance(self.search_query, str) and self.search_query.strip():\n            docs = vector_store.similarity_search(\n                query=self.search_query,\n                k=self.number_of_results,\n            )\n\n            data = docs_to_data(docs)\n            self.status = data\n            return data\n        return []\n"
+              },
+              "embedding": {
+                "_input_type": "HandleInput",
+                "advanced": false,
+                "display_name": "Embedding",
+                "dynamic": false,
+                "info": "",
+                "input_types": [
+                  "Embeddings"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "embedding",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "trace_as_metadata": true,
+                "type": "other",
+                "value": ""
+              },
+              "ingest_data": {
+                "_input_type": "HandleInput",
+                "advanced": false,
+                "display_name": "Ingest Data",
+                "dynamic": false,
+                "info": "",
+                "input_types": [
+                  "Data",
+                  "DataFrame"
+                ],
+                "list": true,
+                "list_add_label": "Add More",
+                "name": "ingest_data",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "trace_as_metadata": true,
+                "type": "other",
+                "value": ""
+              },
+              "number_of_results": {
+                "_input_type": "IntInput",
+                "advanced": true,
+                "display_name": "Number of Results",
+                "dynamic": false,
+                "info": "Number of results to return.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "number_of_results",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "int",
+                "value": 4
+              },
+              "redis_index_name": {
+                "_input_type": "StrInput",
+                "advanced": false,
+                "display_name": "Redis Index",
+                "dynamic": false,
+                "info": "",
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "redis_index_name",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "nlpIndex"
+              },
+              "redis_server_url": {
+                "_input_type": "SecretStrInput",
+                "advanced": false,
+                "display_name": "Redis Server Connection String",
+                "dynamic": false,
+                "info": "",
+                "input_types": [],
+                "load_from_db": false,
+                "name": "redis_server_url",
+                "password": true,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "str",
+                "value": ""
+              },
+              "schema": {
+                "_input_type": "StrInput",
+                "advanced": false,
+                "display_name": "Schema",
+                "dynamic": false,
+                "info": "",
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "schema",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "search_query": {
+                "_input_type": "QueryInput",
+                "advanced": false,
+                "display_name": "Search Query",
+                "dynamic": false,
+                "info": "Enter a query to run a similarity search.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "search_query",
+                "placeholder": "Enter a query...",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": true,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "query",
+                "value": ""
+              },
+              "should_cache_vector_store": {
+                "_input_type": "BoolInput",
+                "advanced": true,
+                "display_name": "Cache Vector Store",
+                "dynamic": false,
+                "info": "If True, the vector store will be cached for the current build of the component. This is useful for components that have multiple output methods and want to share the same vector store.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "should_cache_vector_store",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "bool",
+                "value": true
+              }
+            },
+            "tool_mode": false
+          },
+          "selected_output": "dataframe",
+          "showNode": true,
+          "type": "Redis"
+        },
+        "dragging": false,
+        "id": "Redis-vlrt9",
+        "measured": {
+          "height": 540,
+          "width": 320
+        },
+        "position": {
+          "x": 1204.036359264889,
+          "y": 486.0027093263087
+        },
+        "selected": false,
         "type": "genericNode"
       }
     ],
     "viewport": {
-      "x": -928.297849006711,
-      "y": -898.5928621647793,
-      "zoom": 0.6800379988366964
+      "x": -224.9967818975274,
+      "y": -190.70074344084446,
+      "zoom": 0.3905792573553721
     }
   },
   "description": "Load your data for chat context with Retrieval Augmented Generation.",
